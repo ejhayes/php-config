@@ -54,6 +54,7 @@ Passing values to javascript (jQuery)
 -------------------------------------
 You can also pass values to javascript.  Key names will be converted to camel case (first letter will be capitalized!).  On your PHP script add
 the following to the head section:
+
 	...
 	<head>
 		<?=$config->toJS(array(
