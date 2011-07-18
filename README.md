@@ -50,6 +50,22 @@ If you have several environments that share configuration (not just default stuf
 	[127.0.0.1]
 	EXTENDS=local
 	
+Passing values to javascript (jQuery)
+-------------------------------------
+You can also pass values to javascript.  Key names will be converted to camel case (first letter will be capitalized!).  On your PHP script add
+the following to the head section:
+	...
+	<head>
+		<?=$config->toJS(array(
+			"KEY1",
+			"KEY2",
+			"KEY3"
+		))?>
+	</head>
+	...
+	
+You will now have access to Key1, Key2, and Key3 from within your Javascript.
+	
 Using it
 ========
 In your PHP script just do this:
